@@ -1,15 +1,8 @@
 import React, { Component } from 'react'
-import Hello from './components/Hello'
-import logo from './assets/logo.svg'
-import './App.css'
 
-import { addTodo, toggleTodo, setVisibilityFilter } from './redux/actions'
-import { bindActionCreators } from 'redux'
-import { Provider, connect } from 'react-redux'
-import * as CounterActions from '$redux/actions'
-import configureStore from '$redux/store/configureStore'
-
-const store = configureStore()
+import Footer from './components/Footer'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
 // console.log(store.getState())
 // // 每次 state 更新时，打印日志
 // // 注意 subscribe() 返回一个函数用来注销监听器
@@ -26,11 +19,10 @@ const store = configureStore()
 export default class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo shake-rotate' alt='logo' />
-        </div>
-        <Hello />
+      <div>
+        <AddTodo />
+        <VisibleTodoList />
+        <Footer />
       </div>
     )
   }
