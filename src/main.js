@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { AppContainer } from 'react-hot-loader'
-import { Provider, connect } from 'react-redux'
+import { Provider } from 'react-redux'
 import * as CounterActions from '$redux/actions'
 import configureStore from '$redux/store/configureStore'
 
