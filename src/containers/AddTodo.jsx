@@ -15,6 +15,7 @@ let AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
+        {/*绑定input*/}
         <input ref={node => {
           input = node
         }} />

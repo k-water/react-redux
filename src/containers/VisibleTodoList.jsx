@@ -19,9 +19,14 @@ const mapStateToProps = (state) => ({
   todos: getVisibleTodos(state.todos, state.visibilityFilter)
 })
 
-const mapDispatchToProps =  ({
-  onTodoClick: toggleTodo
-})
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onTodoClick: (id) => {
+      dispatch(toggleTodo(id))
+    }
+  }
+}
 
 const VisibleTodoList = connect(
   mapStateToProps,

@@ -6,8 +6,8 @@ const todo = (state, action) => {
         text: action.text,
         completed: false
       }
-    case 'TOOGLE_TODO':
-      if (satte.id !== action.id) {
+    case 'TOGGLE_TODO':
+      if (state.id !== action.id) {
         return state
       }
 
@@ -19,6 +19,7 @@ const todo = (state, action) => {
       return state
   }
 }
+
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
